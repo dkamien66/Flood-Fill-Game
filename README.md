@@ -1,6 +1,6 @@
 ### Flood-Fill-Game-Browser
 # What
-This project is a puzzle game using randomly colored tiles on a grid. The goal is to all of the tiles on the grid to one color. You start on any tile as your 'filled' territory. You must click on a horizontally or vertically adjacent tile (call this new_tile) to fill your 'filled' territory with the color of that adjacent tile (new_tile). This new tile is now part of your 'filled' territory and any other new tiles of that color that are touching any 'filled' tiles are also now part of your territory. The game continues until the goal is achieved.
+This project is a puzzle game using randomly colored tiles on a grid. The goal is to set all of the tiles on the grid to one color. You start on any tile as your 'filled' territory. You must click on a horizontally or vertically adjacent tile (call this new_tile) to fill your 'filled' territory with the color of that adjacent tile (new_tile). This new tile is now part of your 'filled' territory and any other new tiles of that color that are touching any 'filled' tiles are also now part of your territory. The game continues until the goal is achieved.
 
 # Why
 I first came upon this idea with LeetCode's Flood Fill Question #733. It asks the user to perform a flood fill on a point in an image recursively. I recevied errors with the recursion, but the process of recursion interested me.
