@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <title>Flood Fill Game</title>
+        <style>
+            .grid-container {
+                display: grid;
+                grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+                grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+                background-color: #000000;
+                padding: 10px;
+                width: 500px;
+                margin: auto;
+            }
+            .grid-tile {
+                border: 1px solid #FFFFFF;
+                cursor: pointer;
+
+            }
+            h1, p, button {
+                text-align: center;
+                font-size: 25px;
+                display: block;
+                margin: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Flood Fill Game</h1>
+        <p id="name">Made by Damien Kim</p>
+        <button type="button" id="start_button" display="block">Start New Game</button>
+        <div class="grid-container">
+            <div id="00" class="grid-tile"></div>
+            <div id="01" class="grid-tile"></div>
+            <div id="02" class="grid-tile"></div>
+            <div id="03" class="grid-tile"></div>
+            <div id="04" class="grid-tile"></div>
+            <div id="05" class="grid-tile"></div>
+            <div id="06" class="grid-tile"></div>
+            <div id="07" class="grid-tile"></div>
+            <div id="08" class="grid-tile"></div>
+            <div id="09" class="grid-tile"></div>
+            <div id="10" class="grid-tile"></div>
+            <div id="11" class="grid-tile"></div>
+            <div id="12" class="grid-tile"></div>
+            <div id="13" class="grid-tile"></div>
+            <div id="14" class="grid-tile"></div>
+            <div id="15" class="grid-tile"></div>
+            <div id="16" class="grid-tile"></div>
+            <div id="17" class="grid-tile"></div>
+            <div id="18" class="grid-tile"></div>
+            <div id="19" class="grid-tile"></div>
+            <div id="20" class="grid-tile"></div>
+            <div id="21" class="grid-tile"></div>
+            <div id="22" class="grid-tile"></div>
+            <div id="23" class="grid-tile"></div>
+            <div id="24" class="grid-tile"></div>
+            <div id="25" class="grid-tile"></div>
+            <div id="26" class="grid-tile"></div>
+            <div id="27" class="grid-tile"></div>
+            <div id="28" class="grid-tile"></div>
+            <div id="29" class="grid-tile"></div>
+            <div id="30" class="grid-tile"></div>
+            <div id="31" class="grid-tile"></div>
+            <div id="32" class="grid-tile"></div>
+            <div id="33" class="grid-tile"></div>
+            <div id="34" class="grid-tile"></div>
+            <div id="35" class="grid-tile"></div>
+            <div id="36" class="grid-tile"></div>
+            <div id="37" class="grid-tile"></div>
+            <div id="38" class="grid-tile"></div>
+            <div id="39" class="grid-tile"></div>
+            <div id="40" class="grid-tile"></div>
+            <div id="41" class="grid-tile"></div>
+            <div id="42" class="grid-tile"></div>
+            <div id="43" class="grid-tile"></div>
+            <div id="44" class="grid-tile"></div>
+            <div id="45" class="grid-tile"></div>
+            <div id="46" class="grid-tile"></div>
+            <div id="47" class="grid-tile"></div>
+            <div id="48" class="grid-tile"></div>
+            <div id="49" class="grid-tile"></div>
+            <div id="50" class="grid-tile"></div>
+            <div id="51" class="grid-tile"></div>
+            <div id="52" class="grid-tile"></div>
+            <div id="53" class="grid-tile"></div>
+            <div id="54" class="grid-tile"></div>
+            <div id="55" class="grid-tile"></div>
+            <div id="56" class="grid-tile"></div>
+            <div id="57" class="grid-tile"></div>
+            <div id="58" class="grid-tile"></div>
+            <div id="59" class="grid-tile"></div>
+            <div id="60" class="grid-tile"></div>
+            <div id="61" class="grid-tile"></div>
+            <div id="62" class="grid-tile"></div>
+            <div id="63" class="grid-tile"></div>
+            <div id="64" class="grid-tile"></div>
+            <div id="65" class="grid-tile"></div>
+            <div id="66" class="grid-tile"></div>
+            <div id="67" class="grid-tile"></div>
+            <div id="68" class="grid-tile"></div>
+            <div id="69" class="grid-tile"></div>
+            <div id="70" class="grid-tile"></div>
+            <div id="71" class="grid-tile"></div>
+            <div id="72" class="grid-tile"></div>
+            <div id="73" class="grid-tile"></div>
+            <div id="74" class="grid-tile"></div>
+            <div id="75" class="grid-tile"></div>
+            <div id="76" class="grid-tile"></div>
+            <div id="77" class="grid-tile"></div>
+            <div id="78" class="grid-tile"></div>
+            <div id="79" class="grid-tile"></div>
+            <div id="80" class="grid-tile"></div>
+            <div id="81" class="grid-tile"></div>
+            <div id="82" class="grid-tile"></div>
+            <div id="83" class="grid-tile"></div>
+            <div id="84" class="grid-tile"></div>
+            <div id="85" class="grid-tile"></div>
+            <div id="86" class="grid-tile"></div>
+            <div id="87" class="grid-tile"></div>
+            <div id="88" class="grid-tile"></div>
+            <div id="89" class="grid-tile"></div>
+            <div id="90" class="grid-tile"></div>
+            <div id="91" class="grid-tile"></div>
+            <div id="92" class="grid-tile"></div>
+            <div id="93" class="grid-tile"></div>
+            <div id="94" class="grid-tile"></div>
+            <div id="95" class="grid-tile"></div>
+            <div id="96" class="grid-tile"></div>
+            <div id="97" class="grid-tile"></div>
+            <div id="98" class="grid-tile"></div>
+            <div id="99" class="grid-tile"></div>
+        </div>
+        <p id="attempts_text">Attempts: 0</p>
+    </body>
+    <script src="Flood_Fill_Script.js"></script>
+</html>
